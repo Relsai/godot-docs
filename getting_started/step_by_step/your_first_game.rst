@@ -376,7 +376,7 @@ function:
 
         if velocity.x != 0:
             $AnimatedSprite.animation = "walk"
-            $AnimatedSprite.flip_v = false
+            $AnimatedSprite.flip_v = velocity.y > 0
             # See the note below about boolean assignment
             $AnimatedSprite.flip_h = velocity.x < 0
         elif velocity.y != 0:
@@ -388,7 +388,7 @@ function:
         if (velocity.x != 0)
         {
             animatedSprite.Animation = "walk";
-            animatedSprite.FlipV = false;
+            animatedSprite.FlipV = velocity.y > 0;
             // See the note below about boolean assignment
             animatedSprite.FlipH = velocity.x < 0;
         }
