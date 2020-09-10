@@ -112,7 +112,7 @@ changed:
 
         if velocity.x != 0:
             $AnimatedSprite.animation = "walk"
-            $AnimatedSprite.flip_v = false
+            $AnimatedSprite.flip_v = velocity.y > 0
             $AnimatedSprite.flip_h = velocity.x < 0
         elif velocity.y != 0:
             $AnimatedSprite.animation = "up"
@@ -219,7 +219,7 @@ changed:
             if (velocity.x != 0)
             {
                 animatedSprite.Animation = "walk";
-                animatedSprite.FlipV = false;
+                animatedSprite.FlipV = velocity.y > 0;
                 animatedSprite.FlipH = velocity.x < 0;
             }
             else if(velocity.y != 0)
